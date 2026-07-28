@@ -25,6 +25,11 @@
 Aplicația reunește **organizare**, **planificare** și **învățare asistată de AI** într-un singur spațiu de lucru gândit să fie confortabil și motivant, cu un sidebar persistent care creează senzația unui "loc de studiu" personal, nu doar un simplu tool de productivitate.
 
 ---
+## 🚀 Demo Live
+
+https://student-organizer-green.vercel.app/
+
+
 
 ## 💳 Planuri de abonament
 
@@ -75,11 +80,6 @@ Aplicația reunește **organizare**, **planificare** și **învățare asistată
 | `lib` | Configurări și utilitare (Prisma, Stripe etc.) |
 | `prisma` | Schema bazei de date și migrații |
 | `public` | Imagini și fișiere statice |
----
-
-## 🚀 Demo Live
-
-🔗 **[student-organizer.vercel.app](#)** *(link în curând, după deploy)*
 
 ---
 
