@@ -26,56 +26,55 @@ Aplicația reunește **organizare**, **planificare** și **învățare asistată
 
 ---
 
-## ✨ Funcționalități
+## 💳 Planuri de abonament
 
-### 🆓 Plan Free
+| Funcționalitate | 🆓 Free | 💎 Premium |
+|-----------------|:------:|:----------:|
+| Dashboard | ✅ | ✅ |
+| Gestionare task-uri | ✅ | ✅ |
+| Matricea Eisenhower | ✅ | ✅ |
+| Calendar | ✅ | ✅ |
+| Organizare cursuri | ✅ | ✅ |
+| Profil utilizator | ✅ | ✅ |
+| Număr maxim de task-uri | 20 | Nelimitat |
+| Încărcare materiale de curs | ❌ | ✅ |
+| Generare quiz-uri cu AI | ❌ | ✅ |
+| Generare rezumate cu AI | ❌ | ✅ |
+| Plan de studiu personalizat cu AI | ❌ | ✅ |
+| Suport prioritar | ❌ | ✅ |
+| Preț | **Gratuit** | **50 USD** |
 
-| Funcționalitate | Descriere |
-|---|---|
-| 🧭 **Dashboard** | Prezentare de ansamblu a activității și progresului |
-| ✅ **To-Do List (Matrice Eisenhower)** | Task-urile sunt clasificate automat pe 4 cadrane: **Urgent & Important**, **Important & Neurgent**, **Urgent & Neimportant**, **Neimportant & Neurgent** |
-| 📅 **Calendar integrat** | Sincronizare bidirecțională cu **Google Calendar**, folosind emailul academic al studentului |
-| 🔐 **Autentificare securizată** | Login/Signup gestionat prin **Clerk** |
-| 🗂️ **Sidebar persistent** | Navigare rapidă între Dashboard, Task-uri, Calendar, Profil |
 
-### 💎 Plan Premium — AI Study (50€)
+## 🛠️ Tehnologii utilizate
 
-| Funcționalitate | Descriere |
-|---|---|
-| 📖 **Upload materiale de curs** |
-
-| Layer | Tehnologie |
-|---|---|
-| Framework | [Next.js 16](https://nextjs.org/)(App Router) |
+| Componentă | Tehnologie |
+|------------|------------|
+| Framework | Next.js 16 (App Router) |
 | Limbaj | TypeScript |
 | Stilizare | Tailwind CSS |
-| Bază de date | [Neon](https://neon.tech/) — PostgreSQL Serverless |
-| ORM | [Prisma](https://www.prisma.io/) |
-| Autentificare | [Clerk](https://clerk.com/) |
-| Plăți / Abonamente | [Stripe](https://stripe.com/) |
+| Bază de date | Neon PostgreSQL |
+| ORM | Prisma |
+| Autentificare | Clerk |
+| Plăți | Stripe |
+| Inteligență Artificială | OpenAI API |
 | Calendar | Google Calendar API |
-| AI | Quiz generation / Summarization / Study planning |
-| Deploy | [Vercel](https://vercel.com/) |
-
+| Deploy | Vercel |
 ---
 
 ## 📂 Structura proiectului
 
-student-organizer/
-├── app/ # Rute Next.js (App Router)
-│ ├── dashboard/ # Pagina principală, overview
-│ ├── tasks/ # To-do list & matrice Eisenhower
-│ ├── pricing/ # Planuri de abonament
-│ ├── profile/ # Profil utilizator
-│ ├── sign-in/ # Autentificare (Clerk)
-│ ├── sign-up/ # Înregistrare (Clerk)
-│ └── api/ # API routes (webhooks Stripe, Google Calendar etc.)
-├── components/ # Componente UI reutilizabile
-├── lib/ # Utilitare, configurări (Prisma client, helpers)
-├── prisma/ # Schema bazei de date & migrații
-├── public/ # Assets statice (imagini, logo)
-└── src/generated/prisma/ # Prisma Client generat automat
-
+| Director | Rol |
+|-----------|-----|
+| `app/dashboard` | Pagina principală (Dashboard) |
+| `app/tasks` | Gestionarea task-urilor |
+| `app/calendar` | Calendar și evenimente |
+| `app/profile` | Profil utilizator |
+| `app/pricing` | Pagina de abonamente |
+| `app/api` | API-uri (Stripe, AI, Calendar etc.) |
+| `components` | Componente reutilizabile |
+| `lib` | Configurări și utilitare (Prisma, Stripe etc.) |
+| `prisma` | Schema bazei de date și migrații |
+| `public` | Imagini și fișiere statice |
 ---
 
 ## 🚀 Demo Live
@@ -118,23 +117,47 @@ Deschide [http://localhost:3000](http://localhost:3000) în browser.
 
 ---
 
-## 🗺️ Roadmap
+## 🚀 Roadmap
 
-- [x] Setup proiect Next.js + structură de bază
-- [x] Autentificare cu Clerk
-- [x] Integrare bază de date (Neon + Prisma)
-- [ ] Dashboard funcțional
-- [ ] To-do list cu matrice Eisenhower
-- [ ] Integrare Google Calendar
-- [ ] Integrare Stripe (abonamente Free / Premium)
-- [ ] Generare quiz-uri AI
-- [ ] Generare summary AI
-- [ ] Study Plan AI
-- [ ] Deploy pe Vercel
+| Status | Feature |
+|:------:|---------|
+| ✅ | Project setup |
+| ✅ | Clerk Authentication |
+| ✅ | Prisma + Neon Database |
+| ✅ | Pricing Page |
+| ✅ | Stripe Subscription |
+| ✅ | User Profile |
+|    | Dashboard |
+|    | Task Management |
+|    | Eisenhower Matrix |
+|    | Google Calendar |
+|    | AI Quiz Generator |
+|    | AI Summary Generator |
+|    | AI Study Planner |
+|    | Responsive Design |
+|    | Deploy to Vercel |
+
+
+
+## ✨ Funcționalități
+
+| Modul | Descriere |
+|--------|-----------|
+| 📊 Dashboard | Vizualizare rapidă a progresului și statisticilor personale |
+| ✅ Task-uri | Creare, editare, ștergere și organizare folosind Matricea Eisenhower |
+| 📅 Calendar | Organizarea examenelor, cursurilor și evenimentelor |
+| 👤 Profil | Administrarea contului și a abonamentului |
+| 💳 Abonamente | Upgrade de la Free la Premium prin Stripe |
+| 🤖 AI Quiz | Generarea automată de teste din materialele încărcate |
+| 📝 AI Summary | Generarea rezumatelor pentru cursuri |
+| 📚 AI Study Planner | Crearea unui plan personalizat de învățare |
+
+
 
 ---
 
-## 🌿 Branch Strategy
+## 🌿 Strategie Git
+
 
 | Branch | Scop |
 |---|---|
