@@ -80,6 +80,7 @@ Aplicația reunește **organizare**, **planificare** și **învățare asistată
 ## 🚀 Demo Live
 
 🔗 **[https://student-organizer-green.vercel.app/](#)**
+    **[https://student-organizer-git-dev-practica5.vercel.app/] (#)**
 
 ---
 

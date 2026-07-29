@@ -86,7 +86,7 @@ export default async function DashboardPage() {
 
         <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
           <p className="text-slate-500 text-sm">
-            Premium
+           Subscription
           </p>
 
           <h2 className="text-3xl font-bold text-blue-600 mt-3">
@@ -107,7 +107,7 @@ export default async function DashboardPage() {
 
           <div className="rounded-xl border-2 border-red-300 bg-red-50 p-5 min-h-[220px]">
           <h3 className="mb-4 text-xl font-bold text-slate-900">
-               Do Now
+               Urgent & Important
             </h3>
 
             <p className="text-slate-500">
@@ -117,7 +117,7 @@ export default async function DashboardPage() {
 
           <div className="rounded-xl border-2 border-blue-300 bg-blue-50 p-5 min-h-[220px]">
            <h3 className="mb-4 text-xl font-bold text-slate-900">
-               Schedule
+               Important, Not Urgent
             </h3>
 
             <p className="text-slate-500">
@@ -127,7 +127,7 @@ export default async function DashboardPage() {
 
           <div className="rounded-xl border-2 border-yellow-300 bg-yellow-50 p-5 min-h-[220px]">
             <h3 className="mb-4 text-xl font-bold text-slate-900">
-               Delegate
+               Urgent, Not Important
             </h3>
 
             <p className="text-slate-500">
@@ -137,7 +137,7 @@ export default async function DashboardPage() {
 
           <div className="rounded-xl border-2 border-gray-300 bg-gray-50 p-5 min-h-[220px]">
             <h3 className="mb-4 text-xl font-bold text-slate-900">
-               Eliminate
+               Neither Urgent nor Important
             </h3>
 
             <p className="text-slate-500">
