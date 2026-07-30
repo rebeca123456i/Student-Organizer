@@ -72,10 +72,12 @@ export default function EditTaskDialog({
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
-  <Button className="rounded-lg bg-[#D8B36A] px-3 py-1 text-white hover:bg-[#C7A25B]">
-    Edit
-  </Button>
+    <DialogTrigger
+     render={
+    <Button className="rounded-lg bg-[#D8B36A] px-3 py-1 text-white hover:bg-[#C7A25B]" />
+     }
+    >
+     Edit
 </DialogTrigger>
 
       <DialogContent className="max-w-xl rounded-[32px] border border-[#E8DDC7] bg-[#FAF8F4] p-8 shadow-2xl">
