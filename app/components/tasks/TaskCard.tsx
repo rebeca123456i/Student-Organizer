@@ -1,6 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import { useRouter } from "next/navigation";
+
 import EditTaskDialog from "./EditTaskDialog";
 
 interface TaskCardProps {
@@ -24,6 +26,8 @@ export default function TaskCard({
 }: TaskCardProps) {
   const router = useRouter();
 
+  const [open, setOpen] = useState(false);
+
   async function deleteTask() {
     const confirmed = window.confirm(
       "Are you sure you want to delete this task?"
@@ -45,7 +49,9 @@ export default function TaskCard({
 
   return (
     <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md">
+
       <div className="flex justify-between items-start">
+
         <div>
           <h2 className="text-xl font-semibold text-slate-900">
             {title}
@@ -67,23 +73,25 @@ export default function TaskCard({
         >
           {priority}
         </span>
+
       </div>
 
       <div className="mt-6 flex items-center justify-between">
+
         <span className="text-sm text-slate-500">
           {status}
         </span>
 
         <div className="flex gap-2">
 
-          <EditTaskDialog
-            id={id}
-            title={title}
-            description={description}
-            priority={priority}
-            quadrant={quadrant}
-            deadline={deadline}
-          />
+         <EditTaskDialog
+  id={id}
+  title={title}
+  description={description}
+  priority={priority}
+  quadrant={quadrant}
+  deadline={deadline}
+/>
 
           <button
             onClick={deleteTask}
@@ -93,7 +101,9 @@ export default function TaskCard({
           </button>
 
         </div>
+
       </div>
+
     </div>
   );
 }

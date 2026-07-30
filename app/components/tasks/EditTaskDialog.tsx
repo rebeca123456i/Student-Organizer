@@ -27,6 +27,7 @@ interface EditTaskDialogProps {
   deadline?: string;
 }
 
+
 export default function EditTaskDialog({
   id,
   title: initialTitle,
@@ -71,15 +72,11 @@ export default function EditTaskDialog({
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger
-        render={
-          <Button className="rounded-lg bg-[#D8B36A] px-3 py-1 text-white hover:bg-[#C7A25B]">
-            Edit
-          </Button>
-        }
-      >
-        Edit
-      </DialogTrigger>
+      <DialogTrigger asChild>
+  <Button className="rounded-lg bg-[#D8B36A] px-3 py-1 text-white hover:bg-[#C7A25B]">
+    Edit
+  </Button>
+</DialogTrigger>
 
       <DialogContent className="max-w-xl rounded-[32px] border border-[#E8DDC7] bg-[#FAF8F4] p-8 shadow-2xl">
         <DialogHeader>
@@ -124,30 +121,39 @@ export default function EditTaskDialog({
           </div>
 
           <div>
-            <Label className="mb-2 block font-medium text-[#5B4C3D]">
-              Quadrant
-            </Label>
+          <Label className="mb-2 block font-medium text-[#5B4C3D]">
+             Task Category
+          </Label>
 
-            <select
-              value={quadrant}
-              onChange={(e) =>
-                setQuadrant(
-                  e.target.value as
-                    | "DO_NOW"
-                    | "SCHEDULE"
-                    | "DELEGATE"
-                    | "ELIMINATE"
-                )
-              }
-              className="mt-2 w-full rounded-xl border border-stone-300 bg-white p-3"
-            >
-              <option value="DO_NOW">Urgent & Important</option>
-              <option value="SCHEDULE">Important, Not Urgent</option>
-              <option value="DELEGATE">Urgent, Not Important</option>
-              <option value="ELIMINATE">
-                Neither Urgent nor Important
-              </option>
-            </select>
+          <select
+            value={quadrant}
+            onChange={(e) =>
+          setQuadrant(
+          e.target.value as
+           | "DO_NOW"
+           | "SCHEDULE"
+           | "DELEGATE"
+           | "ELIMINATE"
+         )
+      }
+  className="mt-2 w-full rounded-xl border border-stone-300 bg-white p-3"
+>
+  <option value="DO_NOW">
+     Urgent & Important
+  </option>
+
+  <option value="SCHEDULE">
+    Important, Not Urgent
+  </option>
+
+  <option value="DELEGATE">
+    Urgent, Not Important
+  </option>
+
+  <option value="ELIMINATE">
+     Neither Urgent nor Important
+  </option>
+</select>
           </div>
 
           <div>
